@@ -1,0 +1,174 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Golos Text';
+}
+.screen-reports{
+    display: flex;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    
+}
+.btn-container{ 
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-reports{
+    background-color: rgba(118, 43, 60, 1);
+    color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    cursor: pointer;
+    border: #fff 1px solid;
+    margin: 1rem;
+    font-size: 16px;
+    font-weight: bold;
+    width: 400px;
+}
+.btn-reports:hover{
+    background-color: rgba(165, 127, 44, 1);
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    border: none;
+}
+.btn-reports a{
+    color: #fff;
+    text-decoration: none;
+} 
+.btn-reports a:visited{
+    color: inherit;
+}
+.table{
+    text-align: center;
+    color: rgb(56, 55, 55);
+    width: 70vw;
+}
+.table th{
+    background-color: rgba(118, 43, 60, 1);
+    color: #fff;
+}
+.table td{
+    text-align: center;
+}
+.btn-file{
+    width: 35px;
+    height: 35px;
+    background-color: rgba(118, 43, 60, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+a.btn-file,
+a.btn-file:link,
+a.btn-file:visited,
+a.btn-file:hover,
+a.btn-file:active {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+.btn-file i {
+    color: white;
+}
+.btn-file-container{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.btn-file:hover{
+    background-color: rgba(165, 127, 44, 1);
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+.title-reports{
+    color: rgba(118, 43, 60, 1);
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.form-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.form-report{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.file-report{
+    padding: 1.5rem;
+    margin: 2rem 2rem;
+    background-color: #fff;
+    border-radius: 5px;
+    border: rgba(118, 43, 60, 1) 1px solid;
+    outline: none;
+    font-size: 14px;
+    color: rgb(56, 55, 55);
+    width: 700px
+}
+.file-report::file-selector-button{
+    background-color: rgba(118, 43, 60, 1);
+    color: #fff;
+    padding: 0.7rem;
+    border-radius: 15px;
+    cursor: pointer;
+    border: #fff 1px solid;
+    font-size: 12px;
+}
+.file-report::file-selector-button:hover{
+    background-color: rgba(165, 127, 44, 1);
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    border: none;
+}
+.link{
+    font-size: 20px;
+    margin-top: 50px;
+    font-weight: bold;
+    background-color: rgba(118, 43, 60, 1);
+    color: #fff;
+    width: 50%;
+    border-radius: 10px;
+    text-align: center;
+}
+.link:visited{
+    color: #fff;
+}
+@media(max-width:768px){
+    .btn-container{
+        flex-direction: column;
+    }
+    .form-report{
+        width: 100%;
+    }
+    .file-report{
+        width: 90%;
+    }
+    .btn-reports{
+        width: 90%;
+    }
+    .screen-reports{
+        width: 100%;
+        height: 100%;
+    }
+    .title-reports{
+        text-align: center;
+    }
+}

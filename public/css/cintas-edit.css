@@ -1,0 +1,132 @@
+.modal-contedit{
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.form-edit{
+    background-color: rgba(118, 43, 60, 1);
+    width: 60vw;
+    border-radius: 15px;
+    box-shadow: 8px 8px 20px;
+    display: flex;
+    flex-direction: row; /* 👈 CLAVE */
+    align-items: center;
+    padding: 2rem;
+}
+.input-edit{
+    width: 50%;
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+}
+.input-edit:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+}
+.btn-agregarcinta{
+    background-color: rgba(118, 43, 60, 1);
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    border: #fff 1px solid;
+    margin-left: 2rem;
+}
+.btn-agregarcinta:hover{
+    background-color: rgba(165, 127, 44, 1);
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    border: none;
+}
+.img-form{
+    width: 300px;
+    margin-bottom: 3rem;
+}
+.input-create{
+    width: 50%;
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+}
+.tape{
+    width: 200px;
+    margin-bottom: 1rem;
+}
+.input-create:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+}
+.input-cintas{
+    padding: 0.5rem;
+    margin: 1rem 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: rgb(56, 55, 55);
+    width: 400px;
+}
+@media (max-width: 768px) {
+
+    .form-edit {
+        width: 95vw;
+        height: auto;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .input-edit {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .input-cintas {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .img-form {
+        width: 120px;
+    }
+
+    .tape {
+        width: 100px;
+    }
+    
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .form-edit {
+        width: 80vw;
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .input-edit {
+        width: 100%;
+    }
+
+    .input-cintas {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .img-form {
+        width: 180px;
+        margin-bottom: 1rem;
+    }
+
+    .tape {
+        width: 140px;
+    }
+   
+}

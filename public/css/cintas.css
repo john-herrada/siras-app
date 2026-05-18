@@ -1,0 +1,289 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Golos Text';
+}
+.screen-cintas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#title{
+    font-weight: bold;
+    color: rgba(118, 43, 60, 1);
+    margin-top: 2rem;
+}
+#active-create{
+    display: none;
+}
+.btn-createcinta{
+    background-color: rgba(118, 43, 60, 1);
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    border: #fff 1px solid;
+}
+.btn-createcinta:hover{
+    background-color: rgba(165, 127, 44, 1);
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    border: none;
+}
+.table{
+    text-align: center;
+    color: rgb(56, 55, 55);
+    width: 70vw;
+}
+.table th{
+    background-color: rgba(118, 43, 60, 1);
+    color: #fff;
+}
+.table td{
+    text-align: center;
+}
+.btn-action{
+    width: 35px;
+    height: 35px;
+    background-color: rgba(118, 43, 60, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+a.btn-action,
+a.btn-action:link,
+a.btn-action:visited,
+a.btn-action:hover,
+a.btn-action:active {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+.btn-action i {
+    color: white;
+}
+.action-cont{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.btn-action:hover{
+    background-color: rgba(165, 127, 44, 1);
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+.pagination .page-link {
+    color: rgba(118, 43, 60, 1);
+}
+.pagination .page-item.active .page-link {
+    background-color: rgba(118, 43, 60, 1); 
+    border-color: rgba(118, 43, 60, 1);
+    color: white;
+}
+.buscar{
+    padding: 0.5rem;
+    margin: 1rem 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px rgba(118, 43, 60, 1) solid;
+    outline: none;
+    font-size: 14px;
+    color: rgb(56, 55, 55);
+    width: 400px;
+}
+.btn-action a{
+    color: inherit;
+}
+.btn-action a:visited{
+    color: white;
+}
+.lbl-buscar{
+    color: rgba(118, 43, 60, 1);
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+/*MODAL CREAR CINTA*/
+.modal-contcreate{
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+}
+.form-create{
+    background-color: rgba(118, 43, 60, 1);
+    width: 60vw;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 8px 8px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-form{
+    width: 300px;
+    margin-bottom: 3rem;
+}
+.input-create{
+    width: 50%;
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+}
+.tape{
+    width: 200px;
+    margin-bottom: 1rem;
+}
+.input-create:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+}
+.input-cintas{
+    padding: 0.5rem;
+    margin: 1rem 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: rgb(56, 55, 55);
+    width: 400px;
+}
+.btn-agregarcinta{
+    background-color: rgba(118, 43, 60, 1);
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    border: #fff 1px solid;
+    margin-left: 2rem;
+}
+.btn-agregarcinta:hover{
+    background-color: rgba(165, 127, 44, 1);
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    border: none;
+}
+#active-create:checked ~ .modal-contcreate{
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 768px) {
+
+    .screen-cintas {
+        padding: 1rem;
+    }
+    #title {
+        font-size: 20px;
+        text-align: center;
+    }
+    .btn-createcinta {
+        width: 90%;
+        text-align: center;
+    }
+    .lbl-buscar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .buscar {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+    }
+    .table {
+        width: 100%;
+        min-width: 600px;
+        font-size: 12px;
+    }
+    .action-cont {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .btn-action {
+        width: 30px;
+        height: 30px;
+    }
+    /* MODALES */
+    .form-create,
+    .form-edit {
+        width: 95vw;
+        height: auto;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .error-text{
+        font-size: 12px;
+        color: red;
+    }
+
+    .input-create,
+    .input-edit {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .input-cintas {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .img-form {
+        width: 120px;
+    }
+
+    .tape {
+        width: 100px;
+    }
+    
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .form-create,
+    .form-edit {
+        width: 80vw;
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .input-create,
+    .input-edit {
+        width: 100%;
+    }
+
+    .input-cintas {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .img-form {
+        width: 180px;
+        margin-bottom: 1rem;
+    }
+
+    .tape {
+        width: 140px;
+    }
+   
+}

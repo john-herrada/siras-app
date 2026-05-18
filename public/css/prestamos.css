@@ -1,0 +1,171 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Golos Text';
+}
+.screen-prestamos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#title-prestamos{
+    font-weight: bold;
+    color: rgba(118, 43, 60, 1);
+    margin-top: 2rem;
+}
+.btn-createprestamo{
+    background-color: rgba(118, 43, 60, 1);
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    border: #fff 1px solid;
+    margin: 1rem;
+}
+.btn-createprestamo:hover{
+    background-color: rgba(165, 127, 44, 1);
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    border: none;
+}
+.table{
+    text-align: center;
+    color: rgb(56, 55, 55);
+    width: 70vw;
+}
+.table th{
+    background-color: rgba(118, 43, 60, 1);
+    color: #fff;
+}
+.table td{
+    text-align: center;
+}
+/*MODAL CREAR PRESTAMO*/
+.modal-createprestamo{
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    padding: 1rem;
+    opacity: 0;
+    visibility: hidden;
+}
+.abrir-modal{
+    opacity: 1;
+    visibility: visible;
+}
+.form-createprestamo{
+    width: 95vw;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(118, 43, 60, 1); 
+    height: auto;
+    min-height: 400px;
+    border-radius: 15px;
+    box-shadow: 8px 8px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-create form{
+    width: 100%;
+}
+#img-form{
+    width: 300px;
+    margin-bottom: 3rem;
+}
+.input-create{
+    min-width: 300px;
+    width: auto;
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+    flex: 1;
+}
+.input-create:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+}
+.input-cintas{
+    padding: 0.5rem;
+    margin: 1rem 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: rgb(56, 55, 55);
+    width: 90%;
+}
+.icono{
+    text-align: center;
+    font-size: 180px;
+}
+@media (max-width: 1024px) {
+
+    .screen-prestamos {
+        padding: 1rem;
+        width: 100%;
+    }
+    #title-prestamos {
+        text-align: center;
+        font-size: 20px;
+    }
+    .btn-createprestamo {
+        text-align: center;
+    }
+
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+    }
+    .table {
+        width: 100%;
+        min-width: 600px;
+        font-size: 12px;
+    }
+    .form-createprestamo {
+        width: 90vw;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .input-create {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .input-cintas {
+        width: 100%;
+        max-width: 100%;
+    }
+    #img-form {
+        width: 150px;
+        margin-bottom: 1rem;
+    }
+    .icono {
+        font-size: 80px;
+    }
+}
+@media (max-width: 600px) {
+
+    #title-prestamos {
+        font-size: 18px;
+    }
+    .icono {
+        font-size: 60px;
+    }
+    .table {
+        font-size: 11px;
+    }
+}

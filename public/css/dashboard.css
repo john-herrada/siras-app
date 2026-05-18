@@ -1,0 +1,226 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Golos Text';
+}
+
+.screen-dashboard {
+    background-color: rgba(56, 55, 55, 0.2);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto; 
+    padding-bottom: 2rem;
+}
+.graph-item:nth-child(1){
+    position: relative;
+    width:100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title-div:nth-child(1){
+    width: 100%;
+}
+.graph-item:nth-child(1) canvas{
+    width: 50% !important;
+    height: 80% !important;
+}
+.graph-item:nth-child(2){
+    position: relative;
+    width:100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title-div:nth-child(2){
+    width: 100%;
+}
+.graph-item:nth-child(2) canvas{
+    width: 50% !important;
+    height: 80% !important;
+}
+.clock-container {
+    width: 90%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    color: rgba(56, 55, 55, 1);
+    font-weight: bold;
+    border-radius: 20px;
+    text-align: center;
+    margin: 1rem auto 3rem auto; 
+}
+.countdown-container{
+    text-align: center;
+    color: #fff;
+    background-color: rgba(56, 55, 55, 1);
+    width: 100%;
+}
+.clock {
+    font-size: 150px;
+}
+.clock-item {
+    width: 50%;
+    height: 200px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px;
+    margin: 2rem auto;
+    cursor: pointer;
+}
+#cintas-chart{
+    margin-top: 35px;
+    width: 100%;
+    height: 100%;
+}
+#prestamos-chart{
+    margin-top: 35px;
+    width: 100%;
+    height: 100%;
+}
+.clock-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.title-div {
+    background-color: rgba(56, 55, 55, 1);
+    padding: 0.5rem;
+    color: #fff;
+    border-radius: 20px 20px 0 0;
+    font-size: 16px;
+}
+
+
+
+.title-messages {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.sintesys-message {
+    font-weight: 100;
+    font-size: 14px;
+}
+
+.notification:hover {
+    color: #fff;
+    background-color: rgba(56, 55, 55, 1);
+}
+
+.resume-data-container {
+    width: 50%;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 20px;
+    margin-bottom: 3rem;
+}
+
+.resume-item {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    box-shadow: 2px 2px 10px;
+    border-radius: 20px;    
+    cursor: pointer;
+}
+.resume-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+.box-layout{
+    display: flex;
+}
+.title-div-content {
+    font-size: 120px;
+    color: rgba(56, 55, 55, 1);
+    line-height: 90px;
+}
+.graph-container {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr); 
+    gap: 20px;
+    padding: 0 2rem;
+}
+#link-download{
+    color: #fff;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    font-size: 18px;
+    text-decoration: none;
+}
+#link-download:visited{
+    color: inherit;
+}
+.graph-item{
+    background-color: transparent;
+    box-shadow: 3px 3px 15px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    height: 600px;
+}
+.graph-item:hover{
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+@media(max-width: 768px){
+    .screen-dashboard{
+        width: 100%;
+        height: 100%;
+    }
+    .countdown-container{
+        width: 100%;
+        font-size: 12px;
+    }
+    .clock-container{
+        flex-direction: column;
+        width: 100%;
+    }
+    .clock-item{
+        width: 90%;
+        margin: 0.2rem 0.2rem;
+        height: 200px;
+    }
+    .clock{
+        font-size: 60px;
+    }
+    .box-layout{
+        flex-direction: column;
+    }
+    .resume-data-container{
+        width: 100%;
+    }
+    .resume-item{
+        width: 100%;
+    }
+    .title-div-content{
+        font-size: 70px;
+    }
+    .graph-container{
+        width: 100%;
+    }
+    .graph-item{
+        width: 100%;
+        padding: 0.1rem;
+        margin: 0;
+    }
+    #cintas-chart{
+        margin-top: 40px;
+        width: 600px;
+    }
+     #prestamos-chart{
+        margin-top: 40px;
+        width: 600px;
+    }
+}

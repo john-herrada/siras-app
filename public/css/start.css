@@ -1,0 +1,69 @@
+/* BOTON DE REGRESO */
+.return-container{
+    text-align: center;
+}
+.return{
+    padding: 1rem;
+    color: #ffff;
+    border-radius: 15px;
+    background-color: #004F37;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+.return a{
+    text-decoration: none;
+}
+.return a:visited{
+    color: inherit;
+}
+.return:hover{
+    background-color: #2d2e2e;
+    transform: scale(1,1);
+}
+h2{
+    text-align: center;
+    color: #9D2449;
+    font-size: 40px;
+}
+
+/* DIAGRAMA DEL SITE */
+.svg-container{
+    transform: rotate(90deg) translateX(100%);
+    transform-origin: top right;
+}
+#croquis{
+    width: 100vmax;
+}
+/* ANIMANDO FILAS */
+.fila-item{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background-color: #5FA856;
+}
+.fila-item:hover{
+    background-color: #2d2e2e;
+    transform: scale(1.02);
+    transform-origin: center;
+}
+
+/*PERSONALIZANDO COLORES DEL PLANO*/
+
+
+@media (min-width: 700px) {
+    .svg-container{
+    transform: rotate(0deg);
+    }
+    #croquis{
+    width: 100%;
+    }
+    .return-container{
+    text-align: left;
+    padding: 1rem 0 0 1rem;
+    }
+    .return{
+        padding: 2rem;
+        font-size: 25px;
+    }
+}

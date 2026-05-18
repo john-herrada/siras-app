@@ -1,0 +1,155 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Golos Text';
+}
+html, body {
+    height: auto;
+    min-height: 100%;
+}
+
+.screen-message {
+    min-height: 100dvh; 
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background-color: rgba(1,1,1,0.5);
+}
+.redactar-container{
+    width: 60vw;
+    height: auto;
+    box-shadow: 5px 5px 20px;
+    border-radius: 20px;
+    padding: 2rem;
+    background-color: rgba(118, 43, 60, 1);
+}
+.form-mail{
+    text-align: center;
+    vertical-align: middle;
+}
+#title-form{
+    color: #fff;
+}
+.label-mail{
+    color: #fff;
+    font-weight: bold;
+}
+.input-mail{
+    width: 100%;
+    max-width: 800px;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    background-color: #fff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: rgb(56, 55, 55);
+}
+.select-mail{
+    width: 100%;
+    max-width: 800px;
+    padding: 0.5rem;
+    margin: 1rem 1rem;
+    border-radius: 5px;
+    color: rgb(56, 55, 55);
+    font-size: 14px;
+    margin-bottom: 2rem;
+}
+
+.textarea-mail{
+    width: 100%;
+    max-width: 800px;
+    height: 300px;
+    resize: none;
+    color: rgb(56, 55, 55);
+    margin-bottom: 2rem;
+}
+.input-file-mail{
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    background-color: #fff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: rgb(56, 55, 55);
+    width: 100%;
+    max-width: 800px;
+}
+.input-file-mail::file-selector-button{
+    background-color: rgba(118, 43, 60, 1);
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    border: #fff 1px solid;
+    margin: 1rem;
+}
+.input-file-mail::file-selector-button:hover{
+    background-color: rgba(165, 127, 44, 1);
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    border: none;
+}
+.btn-mail{
+    background-color: rgba(118, 43, 60, 1);
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    border: #fff 1px solid;
+    margin: 1rem;
+}
+.btn-mail:hover{
+    background-color: rgba(165, 127, 44, 1);
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    border: none;
+}
+@media (max-width: 1024px) {
+
+    .screen-message {
+        padding: 1rem;
+        align-items: flex-start;
+    }
+
+    .redactar-container {
+        width: 90vw;
+        padding: 1.5rem;
+    }
+
+    .input-mail,
+    .select-mail,
+    .input-file-mail,
+    .textarea-mail {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .textarea-mail {
+        height: 250px;
+    }
+
+}
+@media (max-width: 600px) {
+
+    #title-form {
+        font-size: 20px;
+    }
+
+    .label-mail {
+        font-size: 14px;
+    }
+
+    .textarea-mail {
+        height: 200px;
+    }
+
+    .btn-mail {
+        width: 100%;
+    }
+
+}

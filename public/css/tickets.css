@@ -1,0 +1,249 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Golos Text';
+}
+.screen-tickets{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.title-ticket{
+    color: rgba(118, 43, 60, 1);
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 2rem;
+}
+.btn-create-ticket{
+    background-color: rgba(118, 43, 60, 1);
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    border: #fff 1px solid;
+    margin-bottom: 2rem;
+}
+.btn-create-ticket a{
+    color: #fff;
+    text-decoration: none;
+}
+.btn-create-ticket a:visited{
+    color: inherit;
+}
+.btn-create-ticket:hover{
+    background-color: rgba(165, 127, 44, 1);
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    border: none;
+}
+.table-container{
+    width: 98%;
+    overflow-y: auto;
+    overflow-x: auto;
+    text-align: center;
+    height: 400px;
+}
+.table{
+    width: 96%;
+    height: auto;
+    margin: auto;
+}
+.table th{
+    background-color: rgba(118, 43, 60, 1);
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+.table td{
+    text-align: center;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+.action-ticket-container{
+    display: flex;
+    width: auto;
+    text-align: center;
+    gap: 10px;
+    justify-content: center;
+}
+.btn-action-ticket{
+    width: 70px;
+    height: 35px;
+    background-color:transparent;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 20px;
+    color: rgb(56, 55, 55);
+    cursor: pointer;
+}
+
+.btn-action-ticket:hover{
+    background-color: rgb(56, 55, 55);
+    color: #fff;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    border: none;
+}
+/*ESTILOS TICKET PARA USUARIO LOGUEADO*/
+.table-container-assign{
+    width: 50%;
+    height: auto;
+    border-radius: 20px;
+    padding: 1rem;
+    box-shadow: 3px 3px 15px;
+}
+.table-container-assign table th{
+    background-color: transparent;
+    color: rgb(56, 55, 55);
+    border: transparent;
+    font-size: 18px;
+}
+.table-container-assign table{
+    border-collapse: collapse;
+}
+.table-container-assign table td{
+    border-collapse: collapse;
+    border: transparent;
+    font-size: 15px;
+}
+.container-edit-button{
+    display: flex;
+}
+.container-edit-button{
+    width: 100%;
+    padding-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+/*MODAL ABRIR TICKET*/
+.modal-content{
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    padding: 1rem;
+    opacity: 0;
+    visibility: hidden;
+}
+.form-ticket-openmodal{
+    opacity: 1;
+    visibility: visible;
+}
+.form-ticket{
+    background-color: rgba(118, 43, 60, 1);
+    border-radius: 20px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 35%;
+    height: 85%;
+}
+.head-form{
+    width: 100%;
+    text-align: center;
+}
+#logo-ticket{
+    width: 300px;
+    padding: 0.5rem;
+}
+.title-form{
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 4rem;
+}
+.input-ticket{
+    width: 60%;
+    padding: 0.5rem;
+    border-radius: 15px;
+    outline: none;
+    color: rgb(56, 55, 55);
+    border: none;
+    margin-bottom: 2rem;
+}
+#text-falla{
+    width: 60%;
+    height: 70px;
+    border-radius: 5px;
+    outline: none;
+    color: rgb(56, 55, 55);
+    border: none;
+    margin-bottom: 2rem;
+    resize: none;
+}
+.btn-content-form{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-between;
+}
+.btn-form-ticket{
+    padding: 1rem;
+    color: #fff;
+    background-color: rgba(118, 43, 60, 1);
+    border: #fff 1px solid;
+    font-weight: bold;
+    border-radius: 15px;
+}
+.btn-form-ticket:hover{
+    background-color: rgba(165, 127, 44, 1);
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    border: none;
+}
+/*ESTILOS MODAL CERRAR TICKET*/
+.modal-content-edit{
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    padding: 1rem;
+    opacity: 0;
+    visibility: hidden;
+}
+.form-ticket-modaledit{
+    opacity: 1;
+    visibility: visible;
+}
+.obser-form{
+    width: 60%;
+    height: 120px;
+    border-radius: 5px;
+    outline: none;
+    color: rgb(56, 55, 55);
+    border: none;
+    margin-bottom: 2rem;
+    resize: none;
+}
+.btn-form-ticket a{
+    color: #fff;
+    text-decoration: none;
+}
+.btn-form-ticket a:visited{
+    color: inherit;
+}
