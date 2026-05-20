@@ -193,7 +193,7 @@
         height: 200px;
     }
     .clock{
-        font-size: 60px;
+        font-size: 32px;
     }
     .box-layout{
         flex-direction: column;
@@ -222,5 +222,14 @@
      #prestamos-chart{
         margin-top: 40px;
         width: 600px;
+    }
+}
+@media(max-width:1024px){
+    .clock {
+        font-size: 90px;
+        margin: auto;
+    }
+    .clock-item{
+        height: 120px;
     }
 }

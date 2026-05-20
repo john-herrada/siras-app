@@ -11,6 +11,7 @@ html, body {
 body{
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 header{
     background-color: rgba(118, 43, 60, 1);
