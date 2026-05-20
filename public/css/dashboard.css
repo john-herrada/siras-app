@@ -193,7 +193,7 @@
         height: 200px;
     }
     .clock{
-        font-size: 32px;
+        font-size: 25px;
     }
     .box-layout{
         flex-direction: column;

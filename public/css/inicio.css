@@ -34,7 +34,7 @@ header{
     margin: 0;
 }
 .user-container{
-     border-radius: 50%;
+    border-radius: 50%;
     border: #fff 0.5pt solid;
 
     width: 45px;
@@ -226,7 +226,7 @@ footer{
     .welcome{
         width: 500px;
         display: flex;
-        gap: 20px;
+        gap: 15px;
         align-items: center;
         padding-right: 0.5rem;
     }
@@ -235,7 +235,7 @@ footer{
     padding: 0 1rem 0 0 ;
     }
     .user-label{
-        font-size: 12px;
+        font-size: 10px;
     }
     .user-container{
         position: relative;
