@@ -10,6 +10,7 @@ use App\Http\Controllers\MapaSiteController;
 use App\Http\Controllers\PrestamoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TicketsController;
+use App\Http\Controllers\VpnController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -60,7 +61,8 @@ Route::middleware(['auth', 'force.password.change'])->group(function () {
     Route::get('/desarrollador', function () {
     return view('desarrollador');
     })->name('developer')->middleware('permission:viewdeveloper');
-        
+    //VISTA VPN
+    Route::resource('vpn', VpnController::class);   
         
 
     // VISTAS SITE

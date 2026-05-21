@@ -50,6 +50,7 @@
             <li><a href="http://172.16.83.36/aps" target="main-frame"><i class="fa-solid fa-wifi"></i></a><span class="text-option">AP´s</span></li>
             <li><a href="http://172.16.83.36/almacenamiento" target="main-frame"><i class="fa-solid fa-server" style="color: rgb(255, 255, 255);"></i></a><span class="text-option">Almacenamiento De Servidores</span></li>
             <li><a onclick="loadPage(`{{ route('tickets.index') }}`)"><i class="fa-solid fa-ticket-simple" style="color: rgb(252, 252, 252);"></i></a><span class="text-option">Seguimiento De Tickets</span></li>
+            <li><a onclick="loadPage(`{{ route('vpn.index') }}`)"><i class="fa-solid fa-globe" style="color: rgb(255, 255, 255);"></i></a><span class="text-option">Asignación de VPN</span></li>
             @endcan
             <li><a onclick="loadPage(`{{ route('logout') }}`)"><i class="fa-solid fa-right-to-bracket"></i></a><span class="text-option">Salir</span></li>
             @can('viewdeveloper')
