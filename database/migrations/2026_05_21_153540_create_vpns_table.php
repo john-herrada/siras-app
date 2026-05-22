@@ -11,8 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('vpns', function (Blueprint $table) {
-            $table->id();
+        Schema::create('vpn', function (Blueprint $table) {
+            $table->id('Id');
+            $table->string('nombre_usuario');
+            $table->string('puesto');
+            $table->integer('telefono');
+            $table->integer('extension');
+            $table->string('correo');
+            $table->string('area');
+            $table->string('direccion_ip');
+            $table->string('usuario');
+            $table->string('clave');
+            $table->string('jefe_inmediato');
+            $table->string('cargo');
+            $table->datetime('fecha_incorporacion');
             $table->timestamps();
         });
     }

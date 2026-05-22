@@ -10,14 +10,28 @@ class VpnController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('Vpn.vpn');
+        $buscar = $request->buscar;
+
+                $vpnb = Vpn::when($buscar, function ($query) use ($buscar) {
+                $query->where('nombre_usuario', 'like', "%$buscar%")
+                    ->orWhere('direccion_ip', 'like', "%$buscar%")
+                    ->orWhere('usuario', 'like', "%$buscar%")
+                    ->orWhere('telefono', 'like', "%$buscar%");
+        })->paginate(20);
+    
+        $registros = $this->getStats();
+        $vpns = Vpn::all();
+        return view('Vpn.vpn', compact ('vpns', 'buscar'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    private function getStats()
+    {
+        return [
+            'Registros' => Vpn::count(),
+        ];
+    }
     public function create()
     {
         //
@@ -28,7 +42,10 @@ class VpnController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Vpn::create($request->all());
+
+        return redirect()->route('vpn.index')
+            ->with('success', 'Usuario agregado correctamente');
     }
 
     /**
@@ -44,15 +61,27 @@ class VpnController extends Controller
      */
     public function edit(Vpn $vpn)
     {
-        //
+        return view('vpn.edit', compact('vpn'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+  
     public function update(Request $request, Vpn $vpn)
     {
-        //
+          $vpn->update($request->only([
+            'nombre_usuario',
+            'puesto',
+            'telefono',
+            'extension',
+            'correo',
+            'area',
+            'direccion_ip',
+            'usuario',
+            'clave',
+            'jefe_inmediato',
+            'cargo'
+        ]));
+        return redirect()->route('vpn.index')
+            ->with('success', 'Registro actualizado correctamente');
     }
 
     /**
@@ -60,6 +89,9 @@ class VpnController extends Controller
      */
     public function destroy(Vpn $vpn)
     {
-        //
+        $vpn->delete();
+
+        return redirect()->route('vpn.index')
+            ->with('success', 'Registro eliminado correctamente');
     }
 }

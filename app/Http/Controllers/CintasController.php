@@ -25,6 +25,7 @@ class CintasController extends Controller
     {
         return view('cintas.edit', compact('cinta'));
     }
+    
     public function store(Request $request)
     {
         $request->validate([

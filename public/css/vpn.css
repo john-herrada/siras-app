@@ -147,7 +147,7 @@
     justify-content: center;
     text-align: center;
 }
-#logo-vpn{
+.logo-vpn{
     width: 400px;
 }
 .title-form{
@@ -175,3 +175,4 @@
     flex-direction: row;
     justify-content: space-between;
 }
+/*vista editar*/
