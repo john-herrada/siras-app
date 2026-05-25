@@ -12,20 +12,18 @@ class VpnController extends Controller
      */
     public function index(Request $request)
     {
-        $buscar = $request->buscar;
+    $buscar = $request->buscar;
+    $stats = $this->getStats();
 
-                $vpnb = Vpn::when($buscar, function ($query) use ($buscar) {
-                $query->where('nombre_usuario', 'like', "%$buscar%")
-                    ->orWhere('direccion_ip', 'like', "%$buscar%")
-                    ->orWhere('usuario', 'like', "%$buscar%")
-                    ->orWhere('telefono', 'like', "%$buscar%");
-        })->paginate(20);
-    
-        $registros = $this->getStats();
-        $vpns = Vpn::all();
-        return view('Vpn.vpn', compact ('vpns', 'buscar'));
+    $vpns = Vpn::when($buscar, function ($query) use ($buscar) {
+        $query->where('nombre_usuario', 'like', "%{$buscar}%")
+              ->orWhere('direccion_ip', 'like', "%{$buscar}%")
+              ->orWhere('usuario', 'like', "%{$buscar}%")
+              ->orWhere('telefono', 'like', "%{$buscar}%");
+    })->paginate(20);
+
+    return view('Vpn.vpn', compact('vpns', 'buscar', 'stats'));
     }
-
     private function getStats()
     {
         return [

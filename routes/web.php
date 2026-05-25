@@ -63,7 +63,6 @@ Route::middleware(['auth', 'force.password.change'])->group(function () {
     })->name('developer')->middleware('permission:viewdeveloper');
     //VISTA VPN
     Route::resource('vpn', VpnController::class);   
-        
 
     // VISTAS SITE
     Route::get('/site/{vista}', [MapaSiteController::class, 'show'])

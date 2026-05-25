@@ -7,7 +7,7 @@
 <div class="screen-vpn">
     <h2 id="titulo">Asignación de VPN a usuarios</h2>
     <div class="users-number">
-        <h2>00</h2>
+        <h2>{{ $stats['Registros'] }}</h2>
         <p>Usuarios Asignados</p>
     </div>
     <br>
@@ -15,7 +15,7 @@
     <button class="btn-vpn abrir">Agregar Nuevo</button>
     <br>
     <br>
-    <form method="GET" action="">
+    <form method="GET" action="{{ route ('vpn.index') }}" class="form-search">
         <label class="lbl-buscar">
             Buscar Usuario:
             <input type="text" class="input-vpn-search" name="buscar" value="{{ request('buscar') }}">

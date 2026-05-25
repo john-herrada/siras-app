@@ -176,3 +176,30 @@
     justify-content: space-between;
 }
 /*vista editar*/
+@media(max-width: 768px){
+    .users-number{
+        width: 95%;
+        height: 350px;
+    }
+    .form-search{
+        text-align: center;
+    }
+    .form-vpn{
+        width: 95%;
+        height: 90%;
+    }
+    .logo-vpn{
+        width: 150px;
+    }
+    .title-form{
+        margin-top: 1rem;
+    }
+    .input-vpn{
+        width: 90%;
+        margin-bottom: 0.5rem;
+    }
+    .btn-form-content{
+        width: 90%;
+        
+    }
+}
