@@ -14,6 +14,10 @@
         <button class="btn-reports"><a href="">Cintas De Limpieza</a></button>
 
     </div>
+    <div class="print-files">
+        <h2 class="title-reports">Archivos para imprimir</h2>
+        <button class="btn-reports"><a href="{{ asset('print_archives/BITACORA_DATACENTER.pdf')}}" target="_blank">Bitacora Del Centro de Datos</a></button>
+    </div>
     <div class="form-container">
         <h2 class="title-reports">Carga De Archivos</h2>
         <form action="{{ route('files.store') }}" method="post" class="form-report" enctype="multipart/form-data">
