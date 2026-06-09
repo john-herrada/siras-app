@@ -16,26 +16,22 @@
       <h2>EQUIPO</h2>
       <P>Serie</P>
       <div class="table-container">
-      <table class="table table-striped-columns">
-        <tr>
-          <th>Puerto de origen</th>
-          <th>Puerto de destino</th>
-          <th>Fila de destino</th>
-          <th>Rack de destino</th>
-          <th>Unidad de destino</th>
-          <th>Equipo de destino</th>
-          <th>Serie de destino</th>
-        </tr>
-        <tr>
-          <td>Data</td>
-          <td>Data</td>
-          <td>Data</td>
-          <td>Data</td>
-          <td>Data</td>
-          <td>Data</td>
-          <td>Data</td>
-        </tr>
-      </table>
+      <table class="table table-striped-columns" id="tablaPuertos">
+          <thead>
+          <tr>
+            <th>Puerto de origen</th>
+            <th>Puerto de destino</th>
+            <th>Fila de destino</th>
+            <th>Rack de destino</th>
+            <th>Unidad de destino</th>
+            <th>Equipo de destino</th>
+            <th>Serie de destino</th>
+          </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
       </div>
     </div>
   </div>

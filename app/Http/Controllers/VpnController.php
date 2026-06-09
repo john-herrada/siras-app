@@ -82,9 +82,7 @@ class VpnController extends Controller
             ->with('success', 'Registro actualizado correctamente');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+  
     public function destroy(Vpn $vpn)
     {
         $vpn->delete();

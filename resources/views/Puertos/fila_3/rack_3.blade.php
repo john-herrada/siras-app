@@ -9,7 +9,7 @@
   <br>
   <br>
   <div class="port-list-content">
-    <div class="port-list-item">
+    <div class="port-list-item" id="rackData" data-fila="3" data-rack="3">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 173.76 624">
   <g id="rack-3">
     <rect x="10.72" y="70.65" width="148.1" height="14.28" fill="none"/>
@@ -98,29 +98,25 @@
 </svg>
     </div>
     <div class="port-list-item">
-      <h2>EQUIPO</h2>
-      <P>Serie</P>
+      <h2 id='nombreEquipo'></h2>
+      <P id='serieEquipo'></P>
       <div class="table-container">
-      <table class="table table-striped-columns">
-        <tr>
-          <th>Puerto de origen</th>
-          <th>Puerto de destino</th>
-          <th>Fila de destino</th>
-          <th>Rack de destino</th>
-          <th>Unidad de destino</th>
-          <th>Equipo de destino</th>
-          <th>Serie de destino</th>
-        </tr>
-        <tr>
-          <td>Data</td>
-          <td>Data</td>
-          <td>Data</td>
-          <td>Data</td>
-          <td>Data</td>
-          <td>Data</td>
-          <td>Data</td>
-        </tr>
-      </table>
+      <table class="table table-striped-columns" id="tablaPuertos">
+          <thead>
+          <tr>
+            <th>Puerto de origen</th>
+            <th>Puerto de destino</th>
+            <th>Fila de destino</th>
+            <th>Rack de destino</th>
+            <th>Unidad de destino</th>
+            <th>Equipo de destino</th>
+            <th>Serie de destino</th>
+          </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
@@ -129,3 +125,7 @@
   </div>
 </div>
 @endsection
+@push('scripts')
+    <script src="{{ asset ('scripts/puertos.js') }}?v=2"></script>
+    <script>window.rutaBuscarPuertos = "{{ route('puertos.buscar') }}";</script>
+@endpush

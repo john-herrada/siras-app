@@ -73,24 +73,31 @@
       </fieldset>
     </div>
   </div>
-  <details open>
-    <summary>Vista General</summary>
-    <button class="btn-modal">Agregar nuevo nodo</button>
+    <br>
+    <button class="btn-modal abrir">Agregar nuevo nodo</button>
     <br>
     <br>
     <br>
-    <form method="GET" action="">
-      <label class="lbl-buscar">
+    <form method="GET" action="{{ route('puertos.index') }}">
+    <label class="lbl-buscar">
         Buscar Registro:
-        <input type="text" class="buscar" name="buscar" value="">
-      </label>
-      <button type="submit" class="btn-buscar">Buscar</button>
-    </form>
+        <input
+            type="text"
+            class="buscar"
+            name="buscar"
+            value="{{ request('buscar') }}">
+    </label>
+
+    <button type="submit" class="btn-buscar">
+        Buscar
+    </button>
+</form>
     <br>
     <br>
     <div class="port-data-container">
       <table class="table table-striped-columns">
         <tr>
+          <th>Id HTML</th>
           <th>Equipo</th>
           <th>Serie</th>
           <th>Fila</th>
@@ -105,50 +112,56 @@
           <th>Serie de destino</th>
           <th>Acciones</th>
         </tr>
+        @foreach ($puertos as $puerto)
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>{{ $puerto->id_html }}</td>
+          <td>{{ $puerto->nombre_equipo }}</td>
+          <td>{{ $puerto->serie }}</td>
+          <td>{{ $puerto->fila }}</td>
+          <td>{{ $puerto->rack }}</td>
+          <td>{{ $puerto->posicion_rack }}</td>
+          <td>{{ $puerto->puerto_origen }}</td>
+          <td>{{ $puerto->puerto_destino }}</td>
+          <td>{{ $puerto->fila_destino }}</td>
+          <td>{{ $puerto->rack_destino }}</td>
+          <td>{{ $puerto->unidad_destino }}</td>
+          <td>{{ $puerto->equipo_destino }}</td>
+          <td>{{ $puerto->serie_destino }}</td>
           <td>
             <div class="action-content">
-              <button type="button" class="btn-action"><a href=""><i class="fa-solid fa-pen-to-square" style="color: rgb(255, 255, 255);"></i></a></button>
-              <form action="" method="post">
+              <button type="button" class="btn-action"><a href="{{ route('puertos.edit', $puerto->id) }}"><i class="fa-solid fa-pen-to-square" style="color: rgb(255, 255, 255);"></i></a></button>
+              <form action="{{ route('puertos.destroy', $puerto->id) }}" method="post">
+                @csrf
+                @method ('DELETE')
                 <button type="submit" class="btn-action" onclick="return confirm('¿Deseas borrar el registro?')"><i class="fa-regular fa-trash-can" style="color: rgb(255, 255, 255);"></i></button>
               </form>
             </div>
           </td>
         </tr>
+        @endforeach
       </table>
     </div>
-  </details>
   <!--MODAL PARA AGREGAR REGISTRO-->
   <div class="modal-container">
-    <form action="" method="post" class="add-port">
+    <form action="{{ route('puertos.store')}}" method="post" class="add-port">
+      @csrf
       <div class="head-form-port">
         <img src="{{ asset('img/SENER_Logo_2019.svg') }}" alt="logo-puerto" class="logo-puerto">
         <h2 class="title-form">Agregar Registro</h2>
       </div>
-      <input type="text" name="" placeholder="" class="input-port">
-      <input type="text" name="" placeholder="" class="input-port">
-      <input type="text" name="" placeholder="" class="input-port">
-      <input type="text" name="" placeholder="" class="input-port">
-      <input type="text" name="" placeholder="" class="input-port">
-      <input type="text" name="" placeholder="" class="input-port">
-      <input type="text" name="" placeholder="" class="input-port">
-      <input type="text" name="" placeholder="" class="input-port">
-      <input type="text" name="" placeholder="" class="input-port">
-      <input type="text" name="" placeholder="" class="input-port">
-      <input type="text" name="" placeholder="" class="input-port">
-      <input type="text" name="" placeholder="" class="input-port">
+      <input type="text" name="nombre_equipo" placeholder="Equipo" class="input-port">
+      <input type="text" name="id_html" placeholder="Id reconocimiento HTML" class="input-port">
+      <input type="text" name="serie" placeholder="Serie" class="input-port">
+      <input type="text" name="fila" placeholder="Fila" class="input-port">
+      <input type="text" name="rack" placeholder="Rack" class="input-port">
+      <input type="text" name="posicion_rack" placeholder="Unidad" class="input-port">
+      <input type="text" name="puerto_origen" placeholder="Puerto de origen" class="input-port">
+      <input type="text" name="puerto_destino" placeholder="Puerto de destino" class="input-port">
+      <input type="text" name="fila_destino" placeholder="Fila de destino" class="input-port">
+      <input type="text" name="rack_destino" placeholder="Rack de destino" class="input-port">
+      <input type="text" name="unidad_destino" placeholder="Unidad de destino" class="input-port">
+      <input type="text" name="equipo_destino" placeholder="Equipo de destino" class="input-port">
+      <input type="text" name="serie_destino" placeholder="Serie de destino" class="input-port">
       <div class="btn-form-content">
         <button type="button" class="btn-pt cerrar">Cancelar</button>
         <button type="submit" class="btn-pt">Insertar</button>
