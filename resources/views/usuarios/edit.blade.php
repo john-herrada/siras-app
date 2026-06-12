@@ -8,7 +8,7 @@
 <div class="modal-editusuario">
     <div class="form-editusuario">
         <div class="input-createuser">
-            <img src="{{ asset('img/SENER_Logo_2019.svg') }}" alt="logo" id="img-form">
+            <img src="{{ asset('img/SENER_BCO_DRO.svg') }}" alt="logo" id="img-form">
             <p class="icono"><i class="fa-solid fa-user" style="color: #fff;"></i></p>
             <h2>Editar Usuario</h2>
         </div>

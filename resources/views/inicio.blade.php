@@ -6,7 +6,7 @@
 @endpush
 @section('content')
 <header>
-    <img src="{{asset ('img/SENER_Logo_2019.svg')}}" alt="logo" id="logo-head">
+    <img src="{{asset ('img/SENER_BCO_DRO.svg')}}" alt="logo" id="logo-head">
     <div class="welcome">
     <div class="user-container"  @if(Auth::user()->foto)
                          style="background-image:url('{{ asset(Auth::user()->foto) }}')"
@@ -65,7 +65,7 @@
 </div>
 <footer>
         <div class="footer-container">
-            <img src="{{asset ('img/SENER_Logo_2019.svg')}}" alt="logo" id="logo-footer">
+            <img src="{{asset ('img/SENER_BCO_DRO.svg')}}" alt="logo" id="logo-footer">
         </div>
         <div class="footer-container">
             <h5>Dirección</h5>

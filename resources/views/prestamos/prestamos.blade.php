@@ -34,7 +34,7 @@
         <div class="modal-createprestamo">
             <div class="form-createprestamo">
                 <div class="input-create">
-                    <img src="{{ asset('img/SENER_Logo_2019.svg') }}" alt="logo" id="img-form">
+                    <img src="{{ asset('img/SENER_BCO_DRO.svg') }}" alt="logo" id="img-form">
                     <p class="icono"><i class="fa-solid fa-building-circle-check"></i></p>
                     <h2>Crear Prestamo</h2>
                 </div>

@@ -131,7 +131,7 @@
                 @csrf
                 <div class="head-form">
 
-                    <img src="{{ asset('img/SENER_Logo_2019.svg') }}" alt="logo-ticket" id="logo-ticket">
+                    <img src="{{ asset('img/SENER_BCO_DRO.svg') }}" alt="logo-ticket" id="logo-ticket">
                     <h2 class="title-form">Crear Ticket</h2>
                 </div>
                 <input type="text" name="ticket_referencia" placeholder="Ticket de referencia" class="input-ticket">

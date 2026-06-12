@@ -7,7 +7,7 @@
         <div class="modal-contedit">
             <div class="form-edit">
                 <div class="input-edit">
-                    <img src="{{ asset('img/SENER_Logo_2019.svg') }}" alt="logo" class="img-form">
+                    <img src="{{ asset('img/SENER_BCO_DRO.svg') }}" alt="logo" class="img-form">
                     <img src="{{ asset('img/tape.svg') }}" alt="tape" class="tape">
                     <h2>Editar Cinta</h2>
                 </div>

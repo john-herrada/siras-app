@@ -10,7 +10,7 @@
       @csrf
       @method ('PUT')
       <div class="head-form-port">
-        <img src="{{ asset('img/SENER_Logo_2019.svg') }}" alt="logo-puerto" class="logo-puerto">
+        <img src="{{ asset('img/SENER_BCO_DRO.svg') }}" alt="logo-puerto" class="logo-puerto">
         <h2 class="title-form">Editar Registro</h2>
       </div>
       <input type="text" name="nombre_equipo" value="{{ $puerto->nombre_equipo }}" class="input-port">

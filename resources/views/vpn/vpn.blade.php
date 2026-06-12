@@ -74,7 +74,7 @@
             <form action="{{ route('vpn.store') }}" class="form-vpn" method="post">
                 @csrf
                 <div class="head-form-vpn">
-                    <img src="{{ asset('img/SENER_Logo_2019.svg') }}" alt="logo-ticket" class="logo-vpn">
+                    <img src="{{ asset('img/SENER_BCO_DRO.svg') }}" alt="logo-ticket" class="logo-vpn">
                     <h2 class="title-form">Agregar Usuario</h2>
                     <br>
                 </div>

@@ -55,7 +55,7 @@
     <div class="modal-createusuario">
         <div class="form-createusuario">
             <div class="input-createuser">
-                <img src="{{ asset('img/SENER_Logo_2019.svg') }}" alt="logo" id="img-form">
+                <img src="{{ asset('img/SENER_BCO_DRO.svg') }}" alt="logo" id="img-form">
                 <p class="icono"><i class="fa-solid fa-user"style="color: #fff;"></i></p>
                 <h2>Crear Usuario</h2>
             </div>

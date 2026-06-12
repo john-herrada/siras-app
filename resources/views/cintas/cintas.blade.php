@@ -69,7 +69,7 @@
         <div class="modal-contcreate">
             <div class="form-create">
                 <div class="input-create">
-                    <img src="{{ asset('img/SENER_Logo_2019.svg') }}" alt="logo" class="img-form">
+                    <img src="{{ asset('img/SENER_BCO_DRO.svg') }}" alt="logo" class="img-form">
                     <img src="{{ asset('img/tape.svg') }}" alt="tape" class="tape">
                     <h2>Agregar Cinta</h2>
                 </div>  

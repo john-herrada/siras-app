@@ -38,7 +38,7 @@
                 </form>
             </div>
             <div class="box-login">
-                <img src="{{ asset('img/logoblanco.svg') }}" alt="logo_blanco" id="logo">
+                <img src="{{ asset('img/SENER_BCO.svg') }}" alt="logo_blanco" id="logo">
                 <h1>SIRAS</h1>
                 <p>Sistema Integral De Redes,<br>Almacenamiento Y Servidores.</p>
             </div>
