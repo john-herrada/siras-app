@@ -12,7 +12,7 @@
             <button class="btn-info"><a href="http://localhost:8080/phpmyadmin/" target="_blank">Gestionar Base De Datos</a></button>
         </div>
         <div class="btn-item">
-            <button class="btn-info"><a href="">Documentación</a></button>
+            <button class="btn-info"><a href="{{ asset('Docs/Documentacion.pdf')}}" target="_blank"">Documentación</a></button>
         </div>
         <div class="btn-item">
             <input type="checkbox" id="check">
